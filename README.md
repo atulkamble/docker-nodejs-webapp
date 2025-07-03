@@ -18,6 +18,30 @@ docker-node-webapp/
 ├── docker-compose.yml
 └── README.md
 ```
+# run on Windows 
+// Open Docker Desktop 
+
+```
+# Download and install Chocolatey:
+powershell -c "irm https://community.chocolatey.org/install.ps1|iex"
+
+# Download and install Node.js:
+choco install nodejs-lts --version="22"
+
+# Verify the Node.js version:
+node -v # Should print "v22.17.0".
+
+# Verify npm version:
+npm -v # Should print "10.9.2".
+```
+```
+git clone https://github.com/atulkamble/docker-nodejs-webapp.git
+cd docker-nodejs-webapp
+node index.js
+
+docker-compose build
+docker-compose up
+``
 
 ---
 
@@ -171,3 +195,4 @@ http://localhost:3000
 * Managing containers using **Docker Compose**
 * Exposing container ports
 * Live development via volume mounts
+
